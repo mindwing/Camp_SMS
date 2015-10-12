@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kr.mindwing.camp_exam_sms.ConversationActivity" >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_input"
+        android:scrollbars="vertical" />
+
+    <EditText
+        android:id="@id/text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/send"
+        android:background="#e4e501"
+        android:hint="대화 입력창 "
+        android:padding="15dp"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@id/send"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@id/text_input"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/text_input"
+        android:padding="0dp"
+        android:text="보내기\n(0/140)"
+        android:textColor="#0f0f0f"
+        android:textStyle="bold" />
+
+</RelativeLayout>
