@@ -20,7 +20,7 @@
         android:layout_below="@id/address"
         android:singleLine="true"
         android:text="snippet"
-        android:textSize="15dp" />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/date"
@@ -29,6 +29,6 @@
         android:layout_below="@id/snippet"
         android:singleLine="true"
         android:text="date"
-        android:textSize="15dp" />
+        android:textSize="15sp" />
 
 </RelativeLayout>
