@@ -2,7 +2,7 @@ package kr.mindwing.camp_sms;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -12,7 +12,7 @@ import android.widget.Toast;
 import kr.mindwing.camp_sms.lib.AddressInfo;
 import kr.mindwing.camp_sms.lib.SmsUtil;
 
-public class StartCompositionActivity extends ActionBarActivity {
+public class StartCompositionActivity extends AppCompatActivity {
 
     private EditText etAddress;
     private Button btOk, btCancel;
@@ -21,8 +21,6 @@ public class StartCompositionActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_composition);
-
-        // setTitle(addresses);
 
         etAddress = (EditText) findViewById(R.id.address);
 

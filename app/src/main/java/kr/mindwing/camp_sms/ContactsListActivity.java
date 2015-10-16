@@ -63,7 +63,11 @@ public class ContactsListActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Snackbar.make(recyclerView, "Settings 기능을 구현해주세요.", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+        int count = 0;
+
+        // TODO 대화상대수
+
+        Snackbar.make(recyclerView, String.format("대화상대는 총 %d 명입니다.", count), Snackbar.LENGTH_LONG).show();
 
         return true;
     }

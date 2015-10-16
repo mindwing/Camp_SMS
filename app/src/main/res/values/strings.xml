@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Camp_SMS</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">대화상대 수 확인</string>
 </resources>

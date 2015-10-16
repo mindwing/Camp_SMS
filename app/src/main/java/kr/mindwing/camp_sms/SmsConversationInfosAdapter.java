@@ -30,15 +30,12 @@ public class SmsConversationInfosAdapter extends
     }
 
     @Override
-    public SmsConversationInfosViewHolder onCreateViewHolder(ViewGroup parent,
-                                                             int viewType) {
+    public SmsConversationInfosViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater
                 .from(parent.getContext());
 
-        View view = layoutInflater.inflate(R.layout.listitem_conversation_list,
-                parent, false);
-        SmsConversationInfosViewHolder viewHolder = new SmsConversationInfosViewHolder(
-                view, conversationList);
+        View convView = layoutInflater.inflate(R.layout.listitem_conversation_list, parent, false);
+        SmsConversationInfosViewHolder viewHolder = new SmsConversationInfosViewHolder(convView, conversationList);
 
         return viewHolder;
     }

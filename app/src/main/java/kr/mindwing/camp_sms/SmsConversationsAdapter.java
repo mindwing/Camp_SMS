@@ -40,30 +40,26 @@ public class SmsConversationsAdapter extends
     }
 
     @Override
-    public SmsConversationsViewHolder onCreateViewHolder(ViewGroup parent,
-                                                         int viewType) {
+    public SmsConversationsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = null;
         LayoutInflater layoutInflater = LayoutInflater
                 .from(parent.getContext());
 
+        // TODO 새로운 나인패치 대화풍선을 만들어보세요.
         if (viewType == CONVER_FROM) {
-            view = layoutInflater.inflate(R.layout.listitem_conversation_from,
-                    parent, false);
+            view = layoutInflater.inflate(R.layout.listitem_conversation_from, parent, false);
 
         } else {
-            view = layoutInflater.inflate(R.layout.listitem_conversation_to,
-                    parent, false);
+            view = layoutInflater.inflate(R.layout.listitem_conversation_to, parent, false);
         }
 
-        SmsConversationsViewHolder viewHolder = new SmsConversationsViewHolder(
-                view);
+        SmsConversationsViewHolder viewHolder = new SmsConversationsViewHolder(view);
 
         return viewHolder;
     }
 
     public void notifyMessageAdded(AddressInfo addressInfo, String message) {
-        MessageData msgData = MessageData.buildSentFromScratch(addressInfo,
-                message, System.currentTimeMillis());
+        MessageData msgData = MessageData.buildSentFromScratch(addressInfo, message, System.currentTimeMillis());
 
         conversations.add(msgData);
         notifyItemInserted(conversations.size() - 1);

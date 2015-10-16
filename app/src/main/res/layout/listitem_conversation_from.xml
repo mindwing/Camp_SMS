@@ -12,6 +12,7 @@
         android:gravity="center_vertical"
         android:orientation="vertical">
 
+        <!-- TODO text 색깔 바꾸기-->
         <TextView
             android:id="@+id/conversation"
             android:layout_width="wrap_content"

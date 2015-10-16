@@ -1,11 +1,5 @@
 package kr.mindwing.camp_sms;
 
-import java.util.ArrayList;
-
-import kr.mindwing.camp_sms.lib.AddressInfo;
-import kr.mindwing.camp_sms.lib.MessageData;
-import kr.mindwing.camp_sms.lib.SmsUtil;
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,6 +11,12 @@ import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+
+import kr.mindwing.camp_sms.lib.AddressInfo;
+import kr.mindwing.camp_sms.lib.MessageData;
+import kr.mindwing.camp_sms.lib.SmsUtil;
 
 public class ConversationActivity extends AppCompatActivity {
 
@@ -52,14 +52,11 @@ public class ConversationActivity extends AppCompatActivity {
         etTextInput.addTextChangedListener(new TextWatcher() {
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before,
-                                      int count) {
-
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
 
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count,
-                                          int after) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
 
             @Override
@@ -82,6 +79,8 @@ public class ConversationActivity extends AppCompatActivity {
                 if (result) {
                     adapter.notifyMessageAdded(addressInfo, message);
                     recyclerView.scrollToPosition(adapter.getItemCount() - 1);
+
+                    // TODO 메시지 전송 성공 Snackbar
                 } else {
                     Toast.makeText(ConversationActivity.this,
                             "메시지를 보낼 수 없습니다.", Toast.LENGTH_SHORT).show();
